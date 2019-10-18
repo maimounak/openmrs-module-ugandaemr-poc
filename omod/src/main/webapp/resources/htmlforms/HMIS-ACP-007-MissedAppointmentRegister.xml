@@ -1,0 +1,138 @@
+<htmlform formName="HMIS ACP 007 Missed Appointment Tracking Register"
+          formDescription="Record all cleints who missed their appointment"
+          formEncounterType="6d88e370-f2ba-476b-bf1b-d8eaf3b1b67e"
+          formUuid="59d9341a-f65e-4e86-a98b-415ea54dfa81"
+          formVersion="3.0"
+          formAddMetadata="yes"
+          formUILocation="patientDashboard.visitActions"
+          formOrder="2"
+          formIcon="icon-medkit"
+          formShowIf="(visit.active || !visit.active) &amp;&amp; patient.person.dead==false &amp;&amp; sessionLocation.uuid=='86863db4-6101-4ecf-9a86-5e716d6504e4'"
+          formDisplayStyle="Standard"
+          formLabel="Missed Appointment Tracking Register">
+  
+
+    <div class="poc-page-frame">
+        <div class="row">
+            <div class="col-md-6">
+                <h3><strong>Registration and Personal Information</strong></h3>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-2"><submit/></div>
+        </div> 
+
+        <div class="row">
+            <div class="col-md-4">
+                <label><strong> Missed Appointment Date:</strong> </label>
+                        <encounterDate default="today" disallowMultipleEncountersOnDate="block"/>
+                        <span style="display: none;">
+                                <encounterLocation default="629d78e9-93e5-43b0-ad8a-48313fd99117"
+                                                   order="629d78e9-93e5-43b0-ad8a-48313fd99117"/>
+                            </span>
+            </div>
+        
+
+           <div class="col-md-4">
+                <label><strong> Service Point:</strong> </label>
+                         <obs conceptId="164993" answerConceptId="165047" answerLabel="ART Clinic" style="checkbox" class="horizontal-layout-options"/> <br/>
+                         <obs conceptId="164993" answerConceptId="165048" answerLabel="TB Clinic" style="checkbox" class="horizontal-layout-options"/> <br/>
+                         <obs conceptId="164993" answerConceptId="90002" style="checkbox" class="horizontal-layout-options"/> <br/>
+                   
+            </div>  
+
+             <div class="col-md-4">
+                <label> <strong> Medications due for Refill: </strong></label>
+                         <obs conceptId="160288" answerConceptId="164972" answerLabel="ART Refill" style="checkbox" class="horizontal-layout-options"/> <br/>
+                         <obs conceptId="160288" answerConceptId="164971" answerLabel="TB Meds/TPT" style="checkbox" class="horizontal-layout-options"/> <br/>
+                         <obs conceptId="160288" answerConceptId="90002" style="checkbox" class="horizontal-layout-options"/> <br/>
+                   
+            </div>  
+
+         <div class="row">
+         <br/>
+         </div>
+
+
+        </div>
+         
+         <div class="row">
+            <div class="col-md-4">
+                <label><strong> Mode of Care:</strong> </label>
+                        <obs conceptId="165143" />
+            </div>
+             <div class="col-md-4">
+                <label><strong> Next of Kin Contact:</strong> </label> <br/>
+                        <obs conceptId="165052" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10">
+                <h3><strong>Tracking Information</strong></h3>
+            </div>
+        </div>
+
+        <div class = "row">
+            <div class = "col-md-4">
+                <label><strong>Follow Up Attempt </strong></label>
+            </div>
+
+          
+            <div class = "col-md-4">
+                <label><strong>Follow Up Date </strong></label>
+            </div>
+           
+           <div class = "col-md-4">
+                <label><strong>Follow Up Person</strong><span class="required">*</span></label><br/>
+                        <encounterProvider required="true"/>
+            </div>
+
+         </div> 
+
+         <div class = "row">
+            <div class = "col-md-4">
+                <label><strong>Follow Up Action </strong></label>
+            </div>
+
+          
+            <div class = "col-md-4">
+                <label><strong>Other Action Specify </strong></label>
+            </div>
+           
+           <div class = "col-md-4">
+                <label><strong>Follow Up Outcome</strong></label><br/>
+                        
+            </div>
+
+         </div>   
+
+        <div class = "row">
+            <div class = "col-md-4">
+                <label><strong>Date Returned </strong></label>
+            </div>
+
+          
+            <div class = "col-md-4">
+                <label><strong>Cause of Death </strong></label><br/>
+                  <obs conceptId="5002" />
+            </div>
+           
+           <div class = "col-md-4">
+                <label><strong>Comment</strong></label><br/>
+                        
+            </div>
+
+         </div>   
+        
+
+                
+
+        
+
+
+    </div>
+             
+
+
+</htmlform>
+
